@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones de Peso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CONVERSIONES DE PESO</h1>
+        
+        {% if conversiones %}
+            <table aria-label="Tabla de conversiones de Peso">
+                <br>
+                <caption><b>Lista de conversiones de pesos realizadas</b></caption>
+               <br>
+                <thead>
+                    <br>
+                    <tr>
+                        <th scope="col">Resultado</th>
+                        <th scope="col">Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for conversion in conversiones %}
+                    <tr>
+                        <td>{{ conversion.resultado }}</td>
+                        <td>{{ conversion.tipo }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No hay conversiones registradas aún.</p>
+        {% endif %}
+        
+        <div class="buttons">
+            <a href="{{ url_for('create_peso') }}" class="btn">Crear nueva conversión</a>
+            <a href="{{ url_for('index') }}" class="btn">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>

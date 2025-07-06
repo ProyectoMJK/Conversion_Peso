@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Conversión de Peso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="titulo">
+        <h1>CREAR NUEVA CONVERSION DE PESO</h1>
+        <form method="POST" action="{{ url_for('create_peso') }}">
+    </div>
+    <div class="container">
+         <h2><strong>INGRESAR UNIDADES</strong></h2>
+         <br>
+         <div class="alado">
+                <div class="form-group"> <!---uno al lado del otro-cambiar nombre-->
+                    <label for="peso"><strong>Peso (masa):</strong></label>
+                    <br>
+                    <input type="number" id="peso" name="peso" class="prueba" required aria-required="true" step="0.01">
+                </div>
+              <br>
+                <div class="form-group">
+                    <br>
+                     <label for="tipo"><strong>Tipo de conversión:</strong></label>
+                    <br>
+                     <select id="tipo" name="tipo" required aria-required="true">
+                        <option value="L">Kilos a libras</option>
+                        <option value="K">Libras a kilos</option>
+                     </select>
+                </div>
+            </div>
+                <br>
+            <div class="buttons">
+                <br>
+                <button type="submit" class="btn">Convertir</button>
+                <a href="{{ url_for('get_peso') }}" class="btn">Ver conversiones</a>
+                <a href="{{ url_for('index') }}" class="btn">Volver al inicio</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/*------ resetea los estilos del navegador--*/
+* {
+    margin: 0;                              /* elimina los margenes           */
+    padding: 0;                            /* elimina los espacios           */
+    box-sizing: border-box;               /* brinda mejor tamano de pagina  */
+}
+/*---cuerpo de get, create, index, login---*/
+body {
+    font-family: 'Times New Roman', Times, serif;                  /* fuente de las letras            */
+    background: linear-gradient(to right, #87c4ed, #ab9ceb);  /* degradado de fondo              */
+    margin: 0;                                                   /* elimina el margen del navegador */
+    padding: 20px;                                              /*  anade espacio entre los lados  */
+}
+/*---contenedor para index, create y get, login---*/
+.container { 
+    width: 80%;                                      /* fcambio de 90 a 80        */
+    max-width: 750px;                               /* cambio a 750 de 800           */
+    margin: 20px auto;                             /* fuente de las letras            */
+    padding: 25px 20px;                           /* fuente de las letras            */
+    background-color: rgb(247, 247, 247);      /* fuente de las letras            */
+    border-radius: 10px;                        /* fuente de las letras            */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* fuente de las letras            */
+    min-height: 200px;                        /* cambio a 200 de 300           */    
+}
+
+/*-------------------------------------------*/
+/*------------INDEX-------------------------*/
+/*---titulo grande de SCP index ---*/
+h1 {
+    font-size: 2em;
+    color: rgb(0, 0, 0); 
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+/*---mensaje en index---*/
+.descripcion {
+    color: #1f1c1c;                        /* color de letra casi negro   */         
+    font-size: 18px;                        /* tamano de letra 16          */
+    margin-bottom: 20px;                   /* margen del texto 20 pixeles */
+    text-align: justify;
+    }
+
+/*--barra superior para login y logout-*/
+.barra {
+    position: fixed;                                       /* fija la barra                                     */
+    top: 0;                                               /* posicion fija arriba                              */
+    left: 0;                                             /* posicion fija arriba a la derecha                 */
+    width: 100%;                                        /* ocupa el ancho disponible en la pantalla          */
+    background-color: #010127;                       /* barra azul oscura                                 */
+    padding: 10px 20px;                               /* espacio interno de la barra azul                  */
+    display: flex;                                   /* convierte la barra en un espacio flexible         */   
+    justify-content: flex-end;                      /* alinea los botones a la derecha                   */  
+    gap: 10px;                                     /* agrega espacio entre los botones                  */  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);   /* hace que la barra se vea como si flotara          */  
+    z-index: 999;                                /* mantiene todo en una posicion alta, arriba de todo*/
+}
+
+.top-btn {
+    color: white;                           /* login y logout en blanco                          */  
+    text-decoration: none;                   /*  quita subrayado, sin decoraciones                */  
+    font-weight: bold;                      /* texto en negrita                                  */  
+    padding: 8px 12px;                     /* espacio dentro del boton 8 a&a, 12 lados          */  
+    background-color: #0344a5;          /* agrega espacio entre los botones                  */  
+    border-radius: 6px;                  /* le da un borde redondo al boton                   */  
+    transition: background 0.3s ease;   /* animacion suave al pasar el mouse, dura 3 segundos*/  
+}
+
+.top-btn:hover {
+    background-color: #6b6f6b;       /* cambia el color de fondo del boton cuando pasa el mouse  */  
+}
+
+body {
+    padding-top: 60px;                /* para que la barra no cuabra el cuadro blanco  */              
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/*--label del peso o tipo --*/
+form label {
+    display: block;                      /* a*/ 
+    margin-bottom: 8px;                 /* ancho del cuadrante peso*/
+    font-weight: bold;                 /* ancho del cuadrante peso*/
+    padding: 8px;                     /*espacio interno de boton */
+    width: 300px;                    /* ancho del cuadrante peso*/
+    max-width: 100%;                /* para que no desborde en pantallas pequeñas */   
+    box-sizing: border-box;        /* ancho del cuadrante peso*/
+}
+
+   /* titulo de C.U. en create */
+h2 {
+    font-size: 24px;               /* tamano de letra 24               */
+    color: rgb(0, 0, 0);        /* color negro para las letras      */
+    text-align: center;          /* texto alineado al centro         */
+    margin-bottom: 20px;        /* margen del boton con 20 pixeles  */
+}
+/*-------------------------------------------*/
+/*------------LOGIN-------------------------*/
+
+/*--texto ingresar datos--*/
+h3 {                                   
+    font-size: 16px;                    /* tamano de letra 16               */
+    color: rgb(34, 33, 33);          /* Texto color griseo               */
+    text-align: left;                 /* Texto en alineado a la derecha   */
+    margin-bottom: 15px;             /* Texto en ingresar daros          */
+}
+
+/*--imagen que va en login-*/
+.login {
+    display: block;                      /* la imagen se comporta como un bloque                 */
+    margin: 0 auto;                     /* margen 0 y centra la imagen                          */
+    width: 100px;                      /* ancho fijo de la imagen, funciona con el margen 0    */
+    height: auto;                     /* altura automatica de la imagen                       */
+    margin-bottom: 9px;              /* anade espacio debajo de la imagen                    */
+}
+
+
+/*---------------------------------------------*/
+/*--------------CREATE------------------------*/
+
+/*--peso y tipo al lado del otro--diseno*/
+.alado{
+    display: flex;
+    justify-content: space-between;            /*--probar center...*/
+    gap: 10px 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;                /* ajusta la pantalla por si es pequena */
+}
+
+
+/*--tamano de peso y tipo--*/
+.form-group {
+    font-size: 18px; 
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex: 3; /* Para que ambos campos crezcan igual */
+    min-width: 250px; /* */
+}
+
+/*--seleccionar se vea mas grande--*/
+select {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    width: 350px;
+    height: 35px;
+}
+
+/*--Probando tamano para meter peso-*/
+.prueba{
+    flex-wrap: wrap;
+    height: 35px;
+    width: 250px; /*--cambio de 300-*/
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #c4c4c4; /*--borde blanco de los cuadro de peso, usuario y contrasena--*/
+    box-sizing: border-box;
+}
+
+/*--REVISAR, afecta login*/
+form input[type="text"] {
+    width: 100%;  /*--VER SI AFECTA DONDE SE METE USUARIO */
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+}
+
+
+
+/*--modificado 2 ultimas--*/
+.buttons {
+    display: flex;
+    gap: 25px; /*--MODIFICADO DE 10 A 25--*/
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--prueba lista index-*/
+
+
+/*--boton de convertir--*/
+button {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*--PARA INDEX, GET, CREATE, LOGIN--*/
+.btn {
+    padding: 10px 20px;
+    background-color: #0344a5;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    gap:  10px 20px;
+    margin-top: 20px;
+    display: inline-block;      /* importante para <a> */
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.btn:hover {
+    background-color: #091129;      /* color de fondo del boton    */
+    transform: scale(1.05);          /* transicion cambiar de color */
+}
+
+
+
+/* Estilos para la tabla */
+
+caption {
+   padding-bottom: 10px; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+/* valores dentro de la tabla tipo y resultado, valores */
+th, td {
+    padding: 10px;
+    border: 1px solid #666666;
+    text-align: center;
+}
+
+/* color de la parte de arriba de la tabla -gris */
+th {
+    background-color: #c9c9c9;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces en la página de inicio */
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.container ul li a {
+    color: #f7f1f1;
+    text-decoration: none;
+
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste para el botón fuera del contenedor de la tabla */
+.container .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema conversor de peso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+     <!-- barra superior -->
+    <div class="barra">
+        <a href="{{ url_for('login') }}" class="top-btn">🔑 Login</a>
+        <a href="{{ url_for('logout') }}" class="top-btn">🔒 Logout</a>
+    </div>  
+
+     <!-- Contenedor principal -->
+    <div class="container">
+        <header>
+            <br>
+            <h1><strong>⚖️SISTEMA CONVERSOR DE PESO⚖️</strong></h1>
+            <br>
+        </header>
+        <main>
+            <p class="descripcion">
+                 Este convertidor de peso es una sencilla herramienta para convertir medidas de kilogramos (kg) a libras (lbs) y viceversa. Además, puedes realizar conversiones y ver los resultados de las mismas de forma clara y rápida.
+            </p>
+            <nav>
+                <br>
+                    <div class="buttons">
+                        <a href="{{ url_for('get_peso') }}" class="btn">🔍Ver conversiones de peso </a>
+                        <a href="{{ url_for('create_peso') }}" class="btn">📝Crear nueva conversión de peso</a>
+                    </div>
+            </nav>
+        </main>
+    </div>
+</body>
+</html>

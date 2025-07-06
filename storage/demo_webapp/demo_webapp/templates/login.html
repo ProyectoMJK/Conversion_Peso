@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><strong>INICIAR SESIÓN</strong></h1>
+            <img src="{{ url_for('static', filename='imagen/login.png') }}" alt="Logo" class="login">
+        </header>
+
+        <main>
+            <br>
+            <h3><strong>Ingrese sus datos.</strong></h3>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for msg in messages %}
+                            <li>{{ msg }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <br>
+
+            <form method="post">
+                    <label for="username"><strong>👥 Usuario:</strong></label>
+                    <input type="text" id="username" name="username" class="prueba" required>
+                    <br>
+                    <label for="password"><strong>🔒 Contraseña:</strong></label>
+                    <input type="password" id="password" name="password" class="prueba" required>
+                <br>
+                
+                <div class="buttons">
+                    <button type="submit" class="btn"><strong>Ingresar</strong></button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
